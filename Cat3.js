@@ -427,6 +427,9 @@ function processText(text) {
   // ④ 全角スペース → 半角2つ
   text = text.replace(/　/g, "  ");
 
+  // ⑤ 行末の半角スペース削除
+  text = text.replace(/[ ]+$/gm, "");
+
   return text;
 }
 
